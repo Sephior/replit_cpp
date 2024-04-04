@@ -7,11 +7,11 @@
 //#include "강의 실습/0318.cpp"
 //#include "강의 실습/0321.cpp"
 //#include "강의 실습/0325.cpp"ㄴㄴ
-#include "강의 실습/0328.cpp"
+//#include "강의 실습/0328.cpp"
+#include "강의 실습/0404.cpp"
 
 #include <iostream>
 using namespace std;
-
 
 int main() {
   cout.clear();
@@ -28,7 +28,12 @@ int main() {
   // march_28::num1();
   // march_28::answer1();
   // march_28::num2();
-  march_28::num3();
+  // march_28::num3();
+  april_04::num0();
+  // april_04::num1();
+  //  april_04::num2();
+  //  april_04::num3();
+  
 
   /*
     Circle c1;
