@@ -62,7 +62,7 @@ bool MyIntStack::pop(int &n) {
   if (tos == 0) {
     return false;
   }
-  n = p[tos--];
+  n = p[--tos];
   return true;
 }
 void num2() {
