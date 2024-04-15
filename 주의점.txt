@@ -9,3 +9,7 @@
 
 getline(cin, (num), '\n');
 cin.ignore(num, '\n');
+
+
+
+rand() % (max - min + 1) + min

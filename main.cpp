@@ -9,7 +9,8 @@
 //#include "강의 실습/0325.cpp"ㄴㄴ
 //#include "강의 실습/0328.cpp"
 //#include "강의 실습/0404.cpp"
-#include "강의 실습/0408.cpp"
+//#include "강의 실습/0408.cpp"
+#include "강의 실습/0415.cpp"
 
 #include <iostream>
 using namespace std;
@@ -36,7 +37,11 @@ int main() {
   // april_04::num3();
   // april_08::star();
   // april_08::msg(5);
-  april_08::num1();
+  // april_08::num1();
+  // april_15::num1();
+  // april_15::num2();
+  // april_15::num3();
+  april_15::num4();
   
 
   /*
