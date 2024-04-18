@@ -36,7 +36,7 @@ void num2() {
   cout << "주소 : ";
   getline(cin, address);
   cout << "나이 : ";
-  getline(cin, name);
+  getline(cin, age);
 
   cout << name << " (" << age << "세) " << address << endl;
 }

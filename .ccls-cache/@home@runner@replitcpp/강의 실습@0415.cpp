@@ -141,7 +141,7 @@ int *ArrayUtility2::remove(int *s1, int *s2, int size, int &retSize) {
   return q;
 }
 void num4() {
-  int size = 5;
+  int retSize = 5;
 
   int x[5], y[5];
   cout << "정수를 5개 입력하라. 배열 x에 삽입한다>>";
@@ -152,12 +152,16 @@ void num4() {
     cin >> y[i];
 
   int *r1 = ArrayUtility2::concat(x, y, 5);
-  int *r2 = ArrayUtility2::remove(x, y, 5, size);
+  int *r2 =
+      ArrayUtility2::remove(x, y, 5, retSize); // 배열의 크기를 retSize에 저장
   for (int i = 0; i < 10; i++)
     cout << r1[i] << ' ';
   cout << endl;
-  for (int i = 0; i < size; i++)
+  for (int i = 0; i < retSize; i++)
     cout << r2[i] << ' ';
   cout << endl;
+
+  delete[] r1;
+  delete[] r2;
 }
 } // namespace april_15

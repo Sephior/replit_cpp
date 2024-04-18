@@ -8,7 +8,7 @@ namespace march_28 {
 void num1() {
   cout << "문자열 입력 > ";
   string str;
-  getline(cin, str, '\n');
+  getline(cin, str, '\n'); // string에만 사용 가능한 getline
 
   char bet;
   int alpha[26] = {

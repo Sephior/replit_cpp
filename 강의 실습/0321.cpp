@@ -1,4 +1,4 @@
-#include <cstdlib>
+#include <cstdlib> // C언어의 라이브러리
 #include <ctime>
 #include <iostream>
 #include <string>
