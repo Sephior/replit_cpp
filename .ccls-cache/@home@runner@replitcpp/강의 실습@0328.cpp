@@ -65,7 +65,7 @@ public:
   Circle(int r);
   double getArea();
 };
-Circle::Circle() { radius = 1; }
+Circle::Circle() : radius(1) {}
 Circle::Circle(int r) { radius = r; }
 double Circle::getArea() { return 3.14 * radius * radius; }
 
@@ -80,7 +80,7 @@ void num2() {
     cout << "원의 반지름 >> ";
     cin >> r;
     p[i] = Circle(r);
-    if (p[i].getArea() >= 100)
+    if (p[i].getArea() > 100)
       count++;
   }
 

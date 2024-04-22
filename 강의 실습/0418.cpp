@@ -43,6 +43,7 @@ public:
   }
 };
 
+// 매개변수 b에 해당하는 Book 객체 주소를 불러와서 고치고 반환하겠다는 반환형
 Book &operator+=(Book &b, int n) {
   b.price += n;
   return b;
@@ -91,12 +92,14 @@ public:
     stack = new int[size];
   }
   Stack &operator<<(int n) {
+    // 스택이 최대면 그냥 반환
     if (top == size)
       return *this;
     stack[top++] = n;
     return *this;
   }
   Stack &operator>>(int &n) {
+    // 스택이 최소면 그냥 반환
     if (top == 0)
       return *this;
     n = stack[--top];

@@ -32,7 +32,10 @@ void num1() {
 void num2() {
   string name, address, age;
   cout << "이름 : ";
+  // cin >> name;
   getline(cin, name);
+  // cin.clear();
+  // cin.ignore(100, '\n');
   cout << "주소 : ";
   getline(cin, address);
   cout << "나이 : ";
@@ -57,7 +60,7 @@ bool checkInputError() {
 void num3() {
 
   cout << "** 중국집 **\n";
-  
+
   int input = 0, person = 0;
   while (input != 4) {
     cout << "짬뽕:1, 짜장:2, 탕수육:3, 종료:4 >> ";

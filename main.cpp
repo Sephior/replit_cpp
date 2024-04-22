@@ -8,11 +8,11 @@
 //#include "강의 실습/0321.cpp"
 //#include "강의 실습/0325.cpp"ㄴㄴ
 //#include "강의 실습/0328.cpp"
-//#include "강의 실습/0404.cpp"
+#include "강의 실습/0404.cpp"
 //#include "강의 실습/0408.cpp"
 //#include "강의 실습/0415.cpp"
 //#include "강의 실습/homework1.cpp"
-#include "강의 실습/0418.cpp"
+//#include "강의 실습/0418.cpp"
 
 #include <iostream>
 using namespace std;
@@ -36,7 +36,7 @@ int main() {
   // april_04::num0();
   // april_04::num1();
   // april_04::num2();
-  // april_04::num3();
+  april_04::num3();
   // april_08::star();
   // april_08::msg(5);
   // april_08::num1();
@@ -46,7 +46,7 @@ int main() {
   // april_15::num4();
   // hw1::hw1();
   // april_18::num1();
-  april_18::num2();
+  // april_18::num2();
 
   /*
     Circle c1;

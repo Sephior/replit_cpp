@@ -17,11 +17,12 @@ void star(int a = 5) {
 
 void msg(int id, string text = "") { cout << id << " : " << text << endl; }
 
+// 전역 함수/변수는 객체마다 초기화되지 않음
 class Person {
 public:
-  static int age;
+  static int age; // 전역 변수
   string name;
-  static void setAge(int a) { a = age; }
+  static void setAge(int a) { age = a; } // 전역 함수
   Person() {}
 };
 
@@ -29,14 +30,15 @@ public:
 int Person::age = 20;
 void num1() {
   Person lee;
-  lee.setAge(19); // 전역 변수라 개인 age는 변경 X
+  lee.setAge(19); // 전역 멤버 함수를 통해 전역 멤버 변수 변경
+  // public이 아니면 직접 접근 불가
   cout << Person::age << endl;
   cout << lee.age << endl;
   Person::age = 18; // 범위 지정 연산자 사용
   cout << lee.age << endl;
 
-  Person *p;
-  p = &lee;
+  Person *p = &lee;
+  // p = &lee;
   p->setAge(19); // 포인터로 활용하는 사례
   p->name = "Kim";
 }

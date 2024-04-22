@@ -7,14 +7,18 @@ using namespace std;
 
  - 만약 매개변수를 받는 생성자만 있는 상황에 매개변수 없는 생성자가 호출되면
    컴파일러가 생성자를 생성하지 않으므로 컴파일 에러
+
+ - 매개변수가 없는 생성자는 private이고
+   매개변수가 있는 생성자는 public일 때
+   매개변수가 없는 생성자를 호출하면 오류 발생
 */
 namespace march_18 {
 
 // 선언부
 class Circle {      // 클래스 이름은 대문자
 public:             // 접근 지정자
-  int radius;       // 선언부에서 초기화 불가
-  double getArea(); // 함수는 함수 원형 상태로만 선언
+  int radius;
+  double getArea();
 
   Circle();      // 클래스 이름과 동일, 반환형 X - 생성자
   Circle(int r); // 매개변수의 차이에 따라 여러 개의 생성자 가능

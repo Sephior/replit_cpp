@@ -17,16 +17,16 @@ Person::Person(const Person &p) {
   this->name = p.name;
   this->id = p.id;
 }
-void f(Person p) { p.changeName("dummy"); }
+void f(Person p) { p.changeName("dummy"); } // 매개변수에서 복사 생성자 호출 (2)
 Person g() {
   Person m;
   m.changeName("Jane");
-  return m;
+  return m; // 객체 리턴 시 복사 생성자 호출 (3)
 }
 void num0() {
   Person father;
   father.changeName("Kitae");
-  Person son = father;
+  Person son = father; // 초기화 시 복사 생성자 호출 (1)
   f(father);
   son = g();
 }
@@ -41,14 +41,13 @@ void num1() {
 
 //문제 2
 
-class MyIntStack {
+class MyIntStack { // 스택 - 후입선출
   int p[10];
   int tos; // 스택의 꼭대기를 가리키는 인덱스
 public:
   MyIntStack();
   bool push(int n); // 정수 n 푸시. 꽉 차 있으면 false, 아니면 true 리턴
-  bool
-  pop(int &n); // 팝하여 n에 저장.스택이 비어 있으면 false, 아니면 true 리턴
+  bool pop(int &n); // 팝하여 n에 저장. 스택이 없으면 false, 아니면 true 리턴
 };
 MyIntStack::MyIntStack() { tos = 0; }
 bool MyIntStack::push(int n) {
@@ -118,8 +117,8 @@ bool Dept::isOver60(int index) {
     return true;
   return false;
 }
-int countPass(Dept &dept) { // dept 학과에 60점 이상으로 통과하는 학생의 수 리턴
-  //해당 코두에서 호출하는 dept에 &를 붙여 참조 매개변수로 만들면 복사를 안함
+int countPass(Dept dept) { // dept 학과에 60점 이상으로 통과하는 학생의 수 리턴
+  //해당 코드에서 호출하는 dept에 &를 붙여 참조 매개변수로 만들면 복사를 안함
   int count = 0;
   for (int i = 0; i < dept.getSize(); i++) {
     if (dept.isOver60(i))

@@ -14,6 +14,7 @@ int add(int x[], int size, int y[]) { return add(x, size) + add(y, size); }
 */
 
 int add(int x[], int size, int y[] = nullptr, int size2 = -1);
+// 함수 원형에만 디폴트 매개변수 지정
 
 void num1() {
   int a[] = {1, 2, 3, 4, 5};
@@ -72,6 +73,7 @@ char random::nextAlphabet() {
   return (result < 26 ? result + 'A' : result - 26 + 'a');
 }
 double random::nextDouble() { return rand() / (double)RAND_MAX; }
+
 void num3() {
   cout << "1에서 100까지 랜덤한 정수 10개를 출력합니다" << endl;
   random::seed();
