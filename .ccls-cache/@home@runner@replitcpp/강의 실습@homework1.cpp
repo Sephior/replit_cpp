@@ -10,7 +10,7 @@ void printList(string list[], int size) {
   cout << endl;
 }
 // 부호 판단, 함수중복
-string isOperator(string c) {
+inline string isOperator(string c) {
   if (c == "+" || c == "-" || c == "*" || c == "/")
     return c;
   else
