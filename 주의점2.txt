@@ -1,0 +1,11 @@
+#ifndef Class_H
+#define Class_H
+  [헤더 - 클래스 선언부]
+#endif
+
+  (0429.cpp)
+상속된 생성자와 소멸자의 호출 순서
+업캐스팅, 다운캐스팅
+
+  (0502.cpp)
+큐

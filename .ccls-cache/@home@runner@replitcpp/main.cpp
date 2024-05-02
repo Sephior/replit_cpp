@@ -6,13 +6,15 @@
 //#include "강의 실습/0314.cpp"
 //#include "강의 실습/0318.cpp"
 //#include "강의 실습/0321.cpp"
-//#include "강의 실습/0325.cpp"ㄴㄴ
+//#include "강의 실습/0325.cpp"
 //#include "강의 실습/0328.cpp"
-// #include "강의 실습/0404.cpp"
+//#include "강의 실습/0404.cpp"
 //#include "강의 실습/0408.cpp"
 //#include "강의 실습/0415.cpp"
-#include "강의 실습/homework1.cpp"
+// #include "강의 실습/homework1.cpp"
 //#include "강의 실습/0418.cpp"
+//#include "강의 실습/0429.cpp"
+#include "강의 실습/0502.cpp"
 
 #include <iostream>
 using namespace std;
@@ -44,10 +46,14 @@ int main() {
   // april_15::num2();
   // april_15::num3();
   // april_15::num4();
-  hw1::hw1();
+  // hw1::hw1();
   // april_18::num1();
   // april_18::num2();
-
+  // april_29::num1();
+  // april_29::num2();
+  // march_2::num1();
+  march_2::num2();
+  
   /*
     Circle c1;
     cout << "c1의 면적은 " << c1.getArea() << endl;
