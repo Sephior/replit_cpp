@@ -30,6 +30,51 @@ class [클래스명] : public [부모 클래스명]{};
 class Student : public Person
 class Student : private Person
 Studetn 클래스는 Person 클래스의 기능과 멤버를 물려받음
+
+부모 클래스가 존재할 시 부모 클래스의 생성자, 소멸자 호출
+Student 객체 생성 시 Person생성자 실행 후 Student 생성자 실행
+소멸자도 Student 소멸자 실행 후 Person 소멸자 실행
+명시된 호출이 없는 경우 기본적으로 부모 클래스의 기본 생성자를 호출하도록 묵시적 삽입
+매개변수 생성자만 있으면 오류
+
+파생 클래스는 기본 클래스의 멤버 접근
+ㄴ 기본 클래스의 private 멤버엔 접근 불가
+
+
+업 캐스팅 : 파생 클래스의 포인터를 기본 클래스의 포인터에 치환
+ㄴ 파생 클래스를 기본 클래스로 보게 함
+ㄴㄴ 파생 클래스의 멤버 접근이 불가능해짐
+
+다운 캐스팅 : 기본 클래스의 포인터를 파생 클래스의 포인터에 치환
+ColorPoint pDer = (ColorPoint *)pBase
+형변환 사용
+ㄴ 기본 클래스를 파생 클래스로 보게 함
+ㄴㄴ 기본 클래스가 파생 클래스의 멤버 접근가능, 하지만 오류발생
+
+
+protected에 대해
+cp.x = 100;  에러 발생, 메인 함수도 외부 함수
+객체 내부의 함수에서만 접근가능
+
+
+상속 시의 접근 지정자(protected, public 대상)
+public : 그대로 계승
+private : private로 변경, 계승
+protected : protected로 변경, 계승
+
+예제 8-6 접근 지정의 컴파일 오류
+
+
+다중 상속
+class mp3 : public m4a, public mp4{};
+
+1을 상속받은 (2, 3)을 상속받은 4의 경우
+4의 객체가 2에서 온 1의 객체인지 3에서 온 1의 객체인지 모름(중복)
+
+가상 상속 : 기본 클래스 멤버의 중복 상속 해결
+2와 3의 클래스 상속에 virtual 키워드
+class in : virtual public set{};
+class out : virtual public set{};
 */
 namespace april_29 {
 class Base {

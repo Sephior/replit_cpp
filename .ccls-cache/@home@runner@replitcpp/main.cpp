@@ -14,7 +14,8 @@
 // #include "강의 실습/homework1.cpp"
 //#include "강의 실습/0418.cpp"
 //#include "강의 실습/0429.cpp"
-#include "강의 실습/0502.cpp"
+//#include "강의 실습/0502.cpp"
+#include "강의 실습/0509.cpp"
 
 #include <iostream>
 using namespace std;
@@ -51,9 +52,13 @@ int main() {
   // april_18::num2();
   // april_29::num1();
   // april_29::num2();
-  // march_2::num1();
-  march_2::num2();
+  // may_2::num1();
+  // may_2::num2();
+  // may_9::num1();
+  // may_9::num2();
+  may_9::num3();
   
+
   /*
     Circle c1;
     cout << "c1의 면적은 " << c1.getArea() << endl;
