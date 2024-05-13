@@ -150,8 +150,8 @@ public:
 void num3() {
   // Calculator cal;  // 추상 클래스라 객체 생성 시 오류
   Adder adder;
-  Subtracter subtracter;
+  Calculator *pCalc = new Subtracter;
   adder.run();
-  subtracter.run();
+  pCalc->run();
 }
 } // namespace may_9
