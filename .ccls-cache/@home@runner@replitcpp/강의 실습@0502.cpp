@@ -17,6 +17,7 @@ protected:
   int get(int index) { return mem[index]; }
   int getCapacity() { return capacity; }
 };
+
 class MyQueue : protected BaseArray {
   int head, tail;
 

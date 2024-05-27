@@ -135,10 +135,13 @@ class Book {
   int year;
 
 public:
-  Book(int year, string title, string author) {
+  Book(int year, string title, string author)
+      : title(title), year(year), author(author) {
+    /*
     this->year = year;
     this->title = title;
     this->author = author;
+  */
   }
   int getyear() { return year; }
   string getauthor() { return author; }
@@ -155,13 +158,14 @@ void num5() {
 
     cout << "년도 >> ";
     cin >> year;
+    cin.ignore(99, '\n');
     if (year == -1) {
       break;
     } else {
       cout << "제목 >> ";
-      cin >> title;
+      getline(cin, title, '\n');
       cout << "저자 >> ";
-      cin >> author;
+      getline(cin, author, '\n');
       Book book(year, title, author);
       v.push_back(book);
     }
@@ -172,19 +176,57 @@ void num5() {
   string author;
 
   cout << "검색하고자 하는 저자 이름을 입력하세요 >> ";
-  cin >> author;
+  getline(cin, author, '\n');
   for_each(v.begin(), v.end(), [author](Book b) {
-    if (b.getauthor() == author) {
+    if (b.getauthor() == author)
       b.print();
-    }
   });
 
   cout << "검색하고자 하는 연도를 입력하세요 >> ";
   cin >> year;
+  cin.ignore(99, '\n');
   for_each(v.begin(), v.end(), [year](Book b) {
-    if (b.getyear() == year) {
+    if (b.getyear() == year)
       b.print();
-    }
   });
+}
+
+void num6() {
+  map<string, int> scores;
+  cout << "*****점수관리 프로그램 HIGH SCORE을 시작합니다 *****" << endl;
+  while (true) {
+    int n;
+    cout << "입력:1, 조회: 2, 종료:3 >> ";
+    cin >> n;
+    if (cin.fail()) {
+      cin.clear();
+      cin.ignore(999999, '\n');
+      continue;
+    }
+    cin.ignore(99, '\n');
+    string name;
+    int score;
+    switch (n) {
+    case 1:
+      cout << "이름과 점수 >> ";
+      cin >> name >> score;
+      cin.ignore(999999, '\n');
+      scores[name] = score;
+      break;
+    case 2:
+      cout << "이름 >> ";
+      getline(cin, name, '\n');
+      if (scores.find(name) == scores.end())
+        cout << "없음" << endl;
+      else
+        cout << scores[name] << endl;
+      break;
+    case 3:
+      return;
+    default:
+      cout << "잘못된 입력입니다." << endl;
+      break;
+    }
+  }
 }
 } // namespace may_20
