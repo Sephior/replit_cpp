@@ -20,7 +20,8 @@
 //#include "강의 실습/0516.cpp"
 //#include "강의 실습/0520.cpp"
 //#include "강의 실습/0523.cpp"
-#include "강의 실습/0527.cpp"
+//#include "강의 실습/0527.cpp"
+#include "강의 실습/0603.cpp"
 
 #include <iostream>
 using namespace std;
@@ -78,7 +79,11 @@ int main() {
   // may_23::num1();
   // may_23::num2();
   // may_23::num3();
-  may_27::num1();
+  // may_27::num1();
+  // may_27::num2();
+  // june_03::num1();
+  june_03::num2();
+  
   
   /*
     Circle c1;
